@@ -1,0 +1,101 @@
+.register-pages {
+    background-color: #131324;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+
+}
+
+.forms {
+    background-color: #00000076;
+    border-radius: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 3rem 5rem;
+    width: 500px;
+ 
+    height: 350px;
+
+
+}
+.body {
+    background-attachment: fixed;
+    background-color: #131324;
+    background-position: 50%;
+    background-size: cover;
+    object-fit: cover;
+    height: 100vh;
+    opacity: .9;
+}
+.login-border {
+    width: 500px;
+    height: 350px;
+    margin: auto;
+    margin-top: 5px;
+    border-radius: 20px;
+    align-items: center;
+    margin-top: 0px;
+    background-color: #00000076;
+  
+}
+.input-group {
+    background-color: transparent;
+}
+
+input {
+    background-color: transparent;
+    border: .1rem solid #4e0eff;
+    border-radius: .4rem;
+    color: #fff;
+    font-size: 1rem;
+    padding: .7rem;
+    width: 100%;
+}
+
+button {
+    background-color: #9a86f3;
+    border: none;
+    border-radius: .5rem;
+    cursor: pointer;
+    justify-content: center;
+    padding: .5rem;
+}
+
+span {
+    color: #fff;
+    text-transform: uppercase;
+}
+
+a {
+    color: #4e0eff;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+@media (max-width:768px) {
+    .forms {
+      
+        width: 500px;
+      
+        height: 350px;
+    }
+    input {
+        background-color: transparent;
+        border: .2rem solid #4e0eff;
+        border-radius: .4rem;
+        color: #fff;
+        font-size: 1rem;
+        padding: .7rem;
+        width: 100%;
+    }
+    .register-pages {
+        background-color: #131324;
+        flex-direction: column;
+        height: 100vh;
+        width: 100vw;
+    
+    }
+    
+   
+}

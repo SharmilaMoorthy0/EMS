@@ -1,0 +1,45 @@
+.category{
+  color: #858796;
+}
+.bg2 {
+    position: absolute;
+    top: 0;
+    width: 100%;
+   left: 1px;
+  }
+  h4{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+  @media (max-width:576px) {
+    .bg2 {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      left: 150px
+  
+    }
+  }
+  
+  @media(min-width:567px) and (max-width:767px) {
+  
+    .bg2 {
+      position: absolute;
+      top: 0;
+      width: 100vh;
+      left: 100px;
+  
+  
+    }
+  }
+  
+  @media(min-width:768px) and (max-width:991px) {
+  
+    .bg2 {
+      position: absolute;
+      top: 0;
+      width: 100vh;
+      left: 210px;
+  
+  
+    }
+  }

@@ -1,0 +1,70 @@
+.register-pages {
+    background-color: #131324;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+
+}
+
+.forms {
+    background-color: #00000076;
+    border-radius: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 3rem 5rem;
+    width: 500px;
+   margin-top: 200px!important;
+    margin: auto;
+    height: 350px;
+
+
+}
+
+h3 {
+    word-spacing: 4px;
+    color: #4e0eff;
+    text-transform: capitalize;
+    font-family:cursive;
+    letter-spacing: 4px;
+    text-align: center;
+    font-weight: 600;
+}
+
+
+h4{
+    word-spacing: 4px;
+    color:#fff;
+    text-transform: capitalize;
+    font-family:cursive;
+    letter-spacing: 4px;
+    text-align: center;
+    font-weight: 600;
+}
+
+
+
+button {
+    background-color: #9a86f3;
+    border: none;
+    border-radius: .5rem;
+    cursor: pointer;
+    justify-content: center;
+    padding: .5rem;
+}
+
+
+@media (max-width:768px) {
+    .form {
+        width: 500px;
+        height: 360px;
+    }
+
+    .register-page {
+       
+        flex-direction: column;
+        height: 100vh;
+        width: 100vw;
+
+    }
+}
