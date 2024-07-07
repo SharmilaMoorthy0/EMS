@@ -18,7 +18,7 @@ function Home() {
 
  
   const getEmployelist = () => {
-    axios.get("http://localhost:4000/all/employe/admin"
+    axios.get("https://management-backend-hu4p.onrender.com/all/employe/admin"
     ).then((res) => {
       if (res.data.status === 1) {
         setEmployelist(res.data.response)
@@ -30,7 +30,7 @@ function Home() {
     getEmployelist()
   }, [])
   const getlist = () => {
-    axios.get("http://localhost:4000/all/category"
+    axios.get("https://management-backend-hu4p.onrender.com/all/category"
 
     ).then((res) => {
       if (res.data.status === 1) {
@@ -45,7 +45,7 @@ function Home() {
 
   const getLeavelist = () => {
 
-    axios.get("http://localhost:4000/all/leave/admin", {
+    axios.get("https://management-backend-hu4p.onrender.com/all/leave/admin", {
       headers: {
         Authorization: localStorage.getItem("myapptoken")
       }
@@ -65,7 +65,7 @@ function Home() {
   }, [])
 
   const getLeaveTypelist = () => {
-    axios.get("http://localhost:4000/all/leave/type"
+    axios.get("https://management-backend-hu4p.onrender.com/all/leave/type"
 
     ).then((res) => {
       if (res.data.status === 1) {

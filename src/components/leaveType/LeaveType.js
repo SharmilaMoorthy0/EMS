@@ -19,7 +19,7 @@ function LeaveType() {
     if (LeaveType.leaveType === "") {
       toast.error(" LeaveType filled cannot be empty!")
     }
-    axios.post("http://localhost:4000/new/leave/type", LeaveType,
+    axios.post("https://management-backend-hu4p.onrender.com/new/leave/type", LeaveType,
 
     ).then((res) => {
       if (res.data.status === 1) {
@@ -48,7 +48,7 @@ function LeaveType() {
       return toast.error(" leaveType filled cannot be empty!")
 
     }
-    axios.put(`http://localhost:4000/update/leave/type/${editLeave._id}`, editLeave
+    axios.put(`https://management-backend-hu4p.onrender.com/update/leave/type/${editLeave._id}`, editLeave
 
     ).then((res) => {
       if (res.data.status === 1) {
@@ -64,7 +64,7 @@ function LeaveType() {
     }).catch((err) => { console.log(err) })
   }
   const getLeaveTypelist = () => {
-    axios.get("http://localhost:4000/all/leave/type"
+    axios.get("https://management-backend-hu4p.onrender.com/all/leave/type"
 
     ).then((res) => {
       if (res.data.status === 1) {
@@ -88,7 +88,7 @@ function LeaveType() {
 
     }).then((willDelete) => {
       if (willDelete) {
-        axios.delete(`http://localhost:4000/Delete/leave/type/${list._id}`
+        axios.delete(`https://management-backend-hu4p.onrender.com/Delete/leave/type/${list._id}`
 
         ).then((res) => {
           if (res.data.status === 1) {

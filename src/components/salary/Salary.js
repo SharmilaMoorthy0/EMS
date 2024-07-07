@@ -18,10 +18,10 @@ function Salary() {
     const getSalarylist = () => {
         let url = ""
         if (user?.role === "admin") {
-            url = "http://localhost:4000/all/salary/admin"
+            url = "https://management-backend-hu4p.onrender.com/all/salary/admin"
         }
         else {
-            url = "http://localhost:4000/all/salary"
+            url = "https://management-backend-hu4p.onrender.com/all/salary"
         }
         axios.get(url,
             {
@@ -49,7 +49,7 @@ function Salary() {
     }
 
     const UpdateSubmit = (id) => {
-        axios.put(`http://localhost:4000/update/salary/${EditSalary._id}`, EditSalary, {
+        axios.put(`https://management-backend-hu4p.onrender.com/update/salary/${EditSalary._id}`, EditSalary, {
             headers: {
                 Authorization: localStorage.getItem("myapptoken")
             }
@@ -70,7 +70,7 @@ function Salary() {
     }
 
     const removeSalary = (id) => {
-        axios.delete(`http://localhost:4000/Delete/salary/${id}`).then((res) => {
+        axios.delete(`https://management-backend-hu4p.onrender.com/Delete/salary/${id}`).then((res) => {
             if (res.data.status === 1) {
                 toast.success(res.data.message)
                 getSalarylist()

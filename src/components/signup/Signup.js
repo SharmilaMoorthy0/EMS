@@ -39,7 +39,7 @@ function Signup() {
 
 
 
-        axios.post("http://localhost:4000/user/signup", user).then((res) => {
+        axios.post("https://management-backend-hu4p.onrender.com/user/signup", user).then((res) => {
             if (res.data.status === 1) {
                 toast.success(res.data.message)
                 navigate('/')

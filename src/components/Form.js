@@ -45,7 +45,7 @@ function Form() {
     const [Employelist, setEmployelist] = useState([])
 
     const getlist = () => {
-        axios.get("http://localhost:4000/all/category"
+        axios.get("https://management-backend-hu4p.onrender.com/all/category"
 
         ).then((res) => {
             if (res.data.status === 1) {
@@ -113,7 +113,7 @@ function Form() {
             return toast.error("Any one Gender is required")
         }
 
-        axios.post("http://localhost:4000/new/employe", { Image, FirstName, LastName, Email, Password, Mobile, Age, DateOfBirth, DateOfJoining, Category, Gender }
+        axios.post("https://management-backend-hu4p.onrender.com/new/employe", { Image, FirstName, LastName, Email, Password, Mobile, Age, DateOfBirth, DateOfJoining, Category, Gender }
 
         )
             .then((res) => {

@@ -55,7 +55,7 @@ function Employe() {
   };
 
   const getlist = () => {
-    axios.get("http://localhost:4000/all/category"
+    axios.get("https://management-backend-hu4p.onrender.com/all/category"
 
     ).then((res) => {
       if (res.data.status === 1) {
@@ -73,10 +73,10 @@ function Employe() {
   const getEmployelist = () => {
     let url = ""
     if (user?.role === "admin") {
-      url = "http://localhost:4000/all/employe/admin"
+      url = "https://management-backend-hu4p.onrender.com/all/employe/admin"
     }
     else {
-      url = "http://localhost:4000/all/employe"
+      url = "https://management-backend-hu4p.onrender.com/all/employe"
     }
     axios.get(url,
       {
@@ -109,7 +109,7 @@ function Employe() {
 
     }).then((willDelete) => {
       if (willDelete) {
-        axios.delete(`http://localhost:4000/Delete/employe/${list._id}`,
+        axios.delete(`https://management-backend-hu4p.onrender.com/Delete/employe/${list._id}`,
           {
             headers: {
               Autdorization: localStorage.getItem("myapptoken")
@@ -133,6 +133,8 @@ function Employe() {
     })
 
   }
+  
+
 
 
 
@@ -154,7 +156,7 @@ function Employe() {
   const handleUpdateEmploye = () => {
     toast.loading("Updating...")
     console.log(editEmployeDetail)
-    axios.put(`http://localhost:4000/update/employe/${editEmployeDetail._id}`, editEmployeDetail, {
+    axios.put(`https://management-backend-hu4p.onrender.com/update/employe/${editEmployeDetail._id}`, editEmployeDetail, {
       headers: {
         Autdorization: localStorage.getItem("myapptoken")
       }

@@ -20,10 +20,10 @@ function Admin() {
     const getLeavelist = () => {
         let url = ""
         if (user?.role === "admin") {
-            url = "http://localhost:4000/all/leave/admin"
+            url = "https://management-backend-hu4p.onrender.com/all/leave/admin"
         }
         else {
-            url = "http://localhost:4000/all/leave"
+            url = "https://management-backend-hu4p.onrender.com/all/leave"
         }
         axios.get(url, {
             headers: {

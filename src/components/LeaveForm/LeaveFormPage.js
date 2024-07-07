@@ -18,7 +18,7 @@ function LeaveFormPage() {
         Description: ""
     })
     const getLeaveTypelist = () => {
-        axios.get("http://localhost:4000/all/leave/type"
+        axios.get("https://management-backend-hu4p.onrender.com/all/leave/type"
 
         ).then((res) => {
             if (res.data.status === 1) {
@@ -38,7 +38,7 @@ function LeaveFormPage() {
         let profile = JSON.parse(localStorage.getItem("userData")).Image
         let client = JSON.parse(localStorage.getItem("userData")).FirstName
         let LeaveDetails = { ...leave, client: client, Image: profile }
-        axios.post("http://localhost:4000/new/leave", LeaveDetails, {
+        axios.post("https://management-backend-hu4p.onrender.com/new/leave", LeaveDetails, {
             headers: {
                 Authorization: localStorage.getItem("myapptoken")
             }

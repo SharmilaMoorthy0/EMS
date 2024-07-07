@@ -25,7 +25,7 @@ function Login() {
         if (login.password === "") {
             return toast.error("password requried")
         }
-        axios.post("http://localhost:4000/login/user", login).then((res) => {
+        axios.post("https://management-backend-hu4p.onrender.com/login/user", login).then((res) => {
             if (res.data.status === 1) {
                 toast.success(res.data.message)
                 console.log(res.data.token)

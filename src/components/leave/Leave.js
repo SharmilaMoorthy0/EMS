@@ -21,10 +21,10 @@ function Leave() {
     const getLeavelist = () => {
         let url = ""
         if (user?.role === "admin") {
-            url = "http://localhost:4000/all/leave/admin"
+            url = "https://management-backend-hu4p.onrender.com/all/leave/admin"
         }
         else {
-            url = "http://localhost:4000/all/leave"
+            url = "https://management-backend-hu4p.onrender.com/all/leave"
         }
         axios.get(url, {
             headers: {
@@ -43,7 +43,7 @@ function Leave() {
     }, [])
 
     const getLeaveStatuslist = () => {
-        axios.get("http://localhost:4000/all/leave/Status"
+        axios.get("https://management-backend-hu4p.onrender.com/all/leave/Status"
 
         ).then((res) => {
             if (res.data.status === 1) {
@@ -57,7 +57,7 @@ function Leave() {
     }, [])
 
     const removeLeave = (list) => {
-        axios.delete(`http://localhost:4000/Delete/leave/${list._id}`,
+        axios.delete(`https://management-backend-hu4p.onrender.com/Delete/leave/${list._id}`,
             {
                 headers: {
                     Authorization: localStorage.getItem("myapptoken")
@@ -78,7 +78,7 @@ function Leave() {
     }
 
     const getLeaveTypelist = () => {
-        axios.get("http://localhost:4000/all/leave/type"
+        axios.get("https://management-backend-hu4p.onrender.com/all/leave/type"
 
         ).then((res) => {
             if (res.data.status === 1) {
@@ -102,7 +102,7 @@ function Leave() {
 
 
     const submit = () => {
-        axios.put(`http://localhost:4000/update/leave/${editLeave._id}`, editLeave, {
+        axios.put(`https://management-backend-hu4p.onrender.com/update/leave/${editLeave._id}`, editLeave, {
             headers: {
                 Authorization: localStorage.getItem("myapptoken")
             }

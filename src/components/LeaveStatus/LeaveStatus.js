@@ -19,7 +19,7 @@ function LeaveStatus() {
     if (LeaveStatus.leaveStatus === "") {
       toast.error(" LeaveStatus filled cannot be empty!")
     }
-    axios.post("http://localhost:4000/new/leave/Status", LeaveStatus,
+    axios.post("https://management-backend-hu4p.onrender.com/new/leave/Status", LeaveStatus,
 
     ).then((res) => {
       if (res.data.status === 1) {
@@ -48,7 +48,7 @@ function LeaveStatus() {
       return toast.error(" leaveStatus filled cannot be empty!")
 
     }
-    axios.put(`http://localhost:4000/update/leave/Status/${editLeave._id}`, editLeave
+    axios.put(`https://management-backend-hu4p.onrender.com/update/leave/Status/${editLeave._id}`, editLeave
 
     ).then((res) => {
       if (res.data.status === 1) {
@@ -64,7 +64,7 @@ function LeaveStatus() {
     }).catch((err) => { console.log(err) })
   }
   const getLeaveStatuslist = () => {
-    axios.get("http://localhost:4000/all/leave/Status"
+    axios.get("https://management-backend-hu4p.onrender.com/all/leave/Status"
 
     ).then((res) => {
       if (res.data.status === 1) {
@@ -88,7 +88,7 @@ function LeaveStatus() {
 
     }).then((willDelete) => {
       if (willDelete) {
-        axios.delete(`http://localhost:4000/Delete/leave/Status/${list._id}`
+        axios.delete(`https://management-backend-hu4p.onrender.com/Delete/leave/Status/${list._id}`
 
         ).then((res) => {
           if (res.data.status === 1) {

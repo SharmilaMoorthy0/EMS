@@ -18,7 +18,7 @@ function SalaryForm() {
         setSalary({ ...Salary, [name]: e.target.value })
     }
     const handleSubmit = () => {
-        axios.post("http://localhost:4000/new/salary", Salary, {
+        axios.post("https://management-backend-hu4p.onrender.com/new/salary", Salary, {
             headers: {
                 Authorization: localStorage.getItem("myapptoken")
             }
