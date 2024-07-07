@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import { useState } from 'react'
-import { useDispatch, useSelector } from 'react-redux'
-import { fetchEmploye } from '../redux/features/Counter'
+
+
 import { isToday } from 'date-fns'
 import axios from 'axios'
 import Layout from '../layout/Layout'
@@ -12,16 +12,11 @@ function Home() {
   const [categoryList, setcategoryList] = useState([])
   const [LeaveList, setLeaveList] = useState([])
   const [LeaveTypeList, setLeaveTypeList] = useState([])
-  const allEmploye = useSelector((state) => state.EmployeData.allEmploye)
+ 
 
-  const dispatch = useDispatch()
-  useEffect(() => {
-    dispatch(fetchEmploye())
-  }, [])
+ 
 
-  const newEmployecount = Employelist.filter((list) => {
-    return isToday(new Date(list.createdAt))
-  })
+ 
   const getEmployelist = () => {
     axios.get("http://localhost:4000/all/employe/admin"
     ).then((res) => {

@@ -5,7 +5,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 
 import { Toaster } from 'react-hot-toast';
-import Dashboard from './components/Sidebar';
+
 import Category from './components/CategoryPage/Category';
 
 import Home from './components/Dashboard/Home';
@@ -13,7 +13,7 @@ import Form from './components/Form';
 import Login from './components/loginadmin/Login';
 import Signup from './components/signup/Signup';
 import Employe from './components/EmployePage/Employe';
-import Sidebar from './components/Sidebar';
+
 import Leave from './components/leave/Leave';
 import Salary from './components/salary/Salary';
 import EmployeLogin from './components/loginEmploye/EmployeLogin'
@@ -56,7 +56,7 @@ function App() {
         <Route path='/login' element={<Login />} />
         <Route path='/Employelogin' element={<EmployeLogin/>} />
          <Route path='/signup' element={<Signup />} />
-        {/* <Route path='/sidebar' element={<Sidebar />} /> */}
+       
         <Route path='/employe' element={<Employe />} />
         <Route path='/home' element={<Home />} />
         <Route path='/form' element={<Form />} />
